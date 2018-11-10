@@ -56,7 +56,7 @@ public class ProductController {
 	public String registerpage(Model m) {
 		m.addAttribute("productpage", true);
 		m.addAttribute("title", "GiftGalore-Product");
-		m.addAttribute("catlist", catagorydao.ViewAllCategory());//1st chage
+		m.addAttribute("catlist", catagorydao.ViewAllCategory());
 		m.addAttribute("prodlist", productdao.SelectAllProduct());
 		m.addAttribute("Product", new Product());
 		m.addAttribute("edit", false);
@@ -64,6 +64,17 @@ public class ProductController {
 
 	}
 
+
+	@RequestMapping(value = "/AllProduct")
+	public String allproducts(Model m) {
+		m.addAttribute("allproductpage", true);
+		m.addAttribute("title", "GiftGalore-Products");
+		m.addAttribute("prodlist", productdao.SelectAllProduct());
+		m.addAttribute("catlist", catagorydao.ViewAllCategory());
+		return "index";
+
+	}
+	
 	@RequestMapping("/addproduct")
 	public String addproduct(@Valid @ModelAttribute("Product") Product product, BindingResult BR, Model m) {
 		if (BR.hasErrors()) {
@@ -162,18 +173,8 @@ public class ProductController {
 		return "index";
 
 	}
-
-	@RequestMapping(value = "/AllProduct")
-	public String allproducts(Model m) {
-		m.addAttribute("allproductpage", true);
-		m.addAttribute("title", "GiftGalore-Products");
-		m.addAttribute("prodlist", productdao.SelectAllProduct());
-		m.addAttribute("catlist", catagorydao.ViewAllCategory());
-		return "index";
-
-	}
 	
-	@RequestMapping(value = "/products")//2nd change
+	@RequestMapping(value = "/products")
 	public String catproducts(Model m,@RequestParam("catname") String name) {
 		m.addAttribute("allproductpage", true);
 		m.addAttribute("title", "GiftGalore-Products");
