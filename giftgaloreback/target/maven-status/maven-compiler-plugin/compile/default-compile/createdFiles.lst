@@ -1,0 +1,12 @@
+com\giftgalore\giftgaloreback\DALayer\CategoryDAOImpl.class
+com\giftgalore\giftgaloreback\DALayer\ProductDAO.class
+com\giftgalore\giftgaloreback\model\UserCred.class
+com\giftgalore\giftgaloreback\DALayer\UserDAOImpl.class
+com\giftgalore\giftgaloreback\DBConfig.class
+com\giftgalore\giftgaloreback\App.class
+com\giftgalore\giftgaloreback\DALayer\ProductDAOImpl.class
+com\giftgalore\giftgaloreback\DALayer\UserDAO.class
+com\giftgalore\giftgaloreback\model\Category.class
+com\giftgalore\giftgaloreback\model\Product.class
+com\giftgalore\giftgaloreback\model\UserDetails.class
+com\giftgalore\giftgaloreback\DALayer\CategoryDAO.class
